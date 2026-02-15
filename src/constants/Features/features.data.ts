@@ -7,6 +7,11 @@ import StampOverlay from '@/assets/Stamp.png';
 import JpgIcon from '@/assets/JPG.png';
 import PdfIcon from '@/assets/PDF.png';
 import TxtIcon from '@/assets/TXT.png';
+import DocumentPhone from '@/assets/phones/DocumentPhone.png';
+import SignStampPhone from '@/assets/phones/SignStampPhone.png';
+import BatchScanPhone from '@/assets/phones/BatchScanPhone.png';
+import AdvFiltersPhone from '@/assets/phones/AdvFiltersPhone.png';
+import ExportSharePhone from '@/assets/phones/ExportSharePhone.png';
 import {
   DocScannerIcon,
   SignStampIcon,
@@ -24,7 +29,7 @@ const FEATURES: IFeature[] = [
     Icon: DocScannerIcon,
     id: 0,
     name: 'document-scanner',
-    phoneImage: 'src/assets/phones/DocumentPhone.png',
+    phoneImage: DocumentPhone as string,
     subTitle: 'Scan with Ease',
     tabLabel: 'Document Scanner',
     title: 'Document Scanner',
@@ -36,7 +41,7 @@ const FEATURES: IFeature[] = [
     Icon: SignStampIcon,
     id: 1,
     name: 'sign-stamp',
-    phoneImage: 'src/assets/phones/SignStampPhone.png',
+    phoneImage: SignStampPhone as string,
     subTitle: 'One-Tap Focus',
     tabLabel: 'Sign & Stamp',
     title: 'SIGN & STAMP',
@@ -50,7 +55,7 @@ const FEATURES: IFeature[] = [
     id: 2,
     name: 'batch-scanning',
     paperImage: PaperImage as string,
-    phoneImage: 'src/assets/phones/BatchScanPhone.png',
+    phoneImage: BatchScanPhone as string,
     subTitle: 'Multiple Page Scan',
     tabLabel: 'Batch Scanning',
     title: 'BATCH SCANNING',
@@ -62,7 +67,7 @@ const FEATURES: IFeature[] = [
     Icon: AdvFilterIcon,
     id: 3,
     name: 'advanced-filters',
-    phoneImage: 'src/assets/phones/AdvFiltersPhone.png',
+    phoneImage: AdvFiltersPhone as string,
     subTitle: 'Uniqe Filters',
     tabLabel: 'Advanced Filters',
     title: 'Advanced Filters',
@@ -75,7 +80,7 @@ const FEATURES: IFeature[] = [
     Icon: ExportShareIcon,
     id: 4,
     name: 'export-and-share',
-    phoneImage: 'src/assets/phones/ExportSharePhone.png',
+    phoneImage: ExportSharePhone as string,
     subTitle: 'All-Round Conversion',
     tabLabel: 'Export & Share',
     title: 'Export & Share',

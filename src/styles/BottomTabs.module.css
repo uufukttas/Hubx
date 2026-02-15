@@ -1,0 +1,100 @@
+.nav {
+  display: flex;
+  width: 100%;
+  height: 124px;
+  margin: 0;
+  border-bottom: 1px solid rgb(0 0 0 / 8%);
+}
+
+.nav-button {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex: 1;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 0 16px;
+  background: transparent;
+  border: 2px solid transparent;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.nav-button:hover {
+  border-color: #0381ff;
+}
+
+.nav-button.active {
+  background: rgb(224 239 251);
+}
+
+.icon-container {
+  position: relative;
+
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: #fff;
+  border: 1px solid rgb(0 0 0 / 8%);
+  border-radius: 50%;
+}
+
+.icon {
+  position: relative;
+  z-index: 1;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.ring-container {
+  pointer-events: none;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 60px;
+  height: 60px;
+}
+
+.ring-active {
+  fill: #0381ff;
+}
+
+.label {
+  font-family: 'SF Pro Display', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 28px;
+  color: #000;
+}
+
+.active .label {
+  color: #0b172a;
+}
+
+@media (width <= 768px) {
+  .nav {
+    scrollbar-width: none;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+  }
+
+  .nav-button {
+    gap: 12px;
+    min-width: 301px;
+    height: 124px;
+    padding: 0 12px;
+  }
+
+  .label {
+    color: #0b172a;
+  }
+}

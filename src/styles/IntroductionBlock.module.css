@@ -1,0 +1,158 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-end;
+  width: 556px;
+  padding: 0;
+}
+
+.text-container {
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-grow: 0;
+  align-items: flex-end;
+  order: 0;
+  width: 556px;
+  height: 149px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: flex-start;
+  width: 135px;
+  height: 54px;
+  padding: 0;
+  border: 0.5px solid rgb(0 0 0 / 16%);
+}
+
+.title-section {
+  top: 0;
+  left: 251px;
+  width: 305px;
+  height: 75px;
+}
+
+.title {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  font-family: 'SF Pro Display', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 19px;
+  color: #0381ff;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.sub-title {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  height: 40px;
+  margin: 0;
+  font-family: 'SF Pro Display', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 40px;
+  color: #0b122a;
+  text-align: right;
+}
+
+.description {
+  position: absolute;
+  top: 95px;
+  left: 0;
+  width: 556px;
+  height: 54px;
+  margin: 0;
+  font-family: 'SF Pro Display', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 32px;
+  color: #0b172a;
+  text-align: right;
+  letter-spacing: 0.8px;
+}
+
+@media (width <= 1024px) {
+  .container {
+    width: 100%;
+    max-width: 556px;
+  }
+
+  .text-container {
+    width: 100%;
+    max-width: 556px;
+  }
+}
+
+@media (width <= 768px) {
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .text-container {
+    position: static;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .title-section {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .title {
+    position: static;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+  }
+
+  .sub-title {
+    position: static;
+    width: auto;
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .title,
+  .description {
+    position: static;
+    width: 100%;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 7.41px;
+    align-items: flex-start;
+    box-sizing: border-box;
+    width: 100px;
+    height: 44px;
+    padding: 0;
+    border: none;
+  }
+}

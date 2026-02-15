@@ -1,0 +1,81 @@
+/* Base */
+.button {
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  font-family:
+    'SF Pro Display',
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #0b122a;
+  text-align: center;
+  text-decoration: none;
+
+  background: transparent;
+  border: 0.5px solid rgb(0 0 0 / 16%);
+  border-radius: 2px;
+
+  transition: all 0.2s ease;
+}
+
+/* Primary variant (IntroductionBlock CTA) */
+.button--primary {
+  width: 135px;
+  height: 54px;
+  padding: 15px 20px;
+
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.button--primary:hover {
+  background: rgb(0 0 0 / 2%);
+  border-color: rgb(0 0 0 / 24%);
+}
+
+.button__text {
+  display: flex;
+  align-items: center;
+
+  width: 95px;
+  height: 24px;
+
+  font-size: 20px;
+  line-height: 24px;
+  color: #0b122a;
+  text-align: center;
+}
+
+/* Tab variant: parent supplies layout via className (e.g. BottomTabs .nav-button) */
+.button--tab {
+  border: 2px solid transparent;
+}
+
+.button--tab:hover {
+  border-color: #0381ff;
+}
+
+@media (width <= 768px) {
+  .button--primary {
+    width: 100px;
+    height: 40px;
+
+    border-radius: 1.4px;
+  }
+
+  .button__text {
+    font-size: 14.8px;
+    line-height: 18px;
+    text-align: center;
+  }
+}

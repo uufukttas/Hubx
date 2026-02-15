@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "target": "ESNext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "types": ["vite/client"],
@@ -19,12 +23,20 @@
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
     "noEmit": true,
-    "jsx": "react-jsx",
+    "jsx": "react-jsx"
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "*.ts",
+    "*.tsx",
+    "main.tsx",
+    "src/App.tsx",
+    "*/App.tsx",
+  ],
   "references": [
     {
-      "path": "./tsconfig.vite.json",
-    },
-  ],
+      "path": "./tsconfig.vite.json"
+    }
+  ]
 }

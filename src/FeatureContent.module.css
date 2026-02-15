@@ -1,0 +1,95 @@
+.page {
+  width: 100%;
+  max-width: 1440px;
+  height: 736px;
+  margin: 0;
+
+  background: #fff;
+}
+
+.content {
+  position: relative;
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  width: 100%;
+  height: 612px;
+
+  background: #fff;
+}
+
+.stage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+  width: 100%;
+  height: 539px;
+  padding: 0 134px;
+}
+
+.phone-section {
+  position: relative;
+  width: 610px;
+  height: 560px;
+}
+
+.introduction-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 235px;
+}
+
+@media (width <= 1024px) {
+  .content {
+    height: auto;
+    padding: 40px 32px 0;
+  }
+
+  .stage {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  .phone-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 420px;
+    margin-bottom: 32px;
+  }
+
+  .introduction-section {
+    justify-content: center;
+    width: 100%;
+    padding-top: 0;
+  }
+}
+
+@media (width <= 768px) {
+  .content {
+    padding: 24px 16px 0;
+  }
+
+  .phone-section {
+    width: 384px;
+    height: 352px;
+    margin: 0;
+  }
+
+  .introduction-section {
+    align-items: flex-start;
+    width: 327px;
+    height: 235px;
+  }
+}

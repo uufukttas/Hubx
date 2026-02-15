@@ -28,6 +28,7 @@
   height: 54px;
   padding: 0;
   border: 0.5px solid rgb(0 0 0 / 16%);
+  margin: 10px 0;
 }
 
 .title-section {
@@ -41,7 +42,6 @@
   position: absolute;
   top: 0;
   right: 0;
-
   font-family: 'SF Pro Display', sans-serif;
   font-size: 16px;
   font-weight: 800;
@@ -101,10 +101,12 @@
   .container {
     display: flex;
     align-items: center;
+    gap: 0;
   }
 
   .text-container {
     position: static;
+    margin: 10px 0;
     width: 100%;
     height: auto;
     text-align: center;
@@ -116,6 +118,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    height: auto;
   }
 
   .title {
@@ -139,20 +142,21 @@
   }
 
   .description {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 24px;
     text-align: center;
   }
 
   .button-container {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     flex-direction: column;
-    gap: 7.41px;
-    align-items: flex-start;
     box-sizing: border-box;
-    width: 100px;
-    height: 44px;
+    width: 100%;
     padding: 0;
     border: none;
+    margin: 0;
   }
 }

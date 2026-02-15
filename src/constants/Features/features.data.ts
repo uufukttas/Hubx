@@ -4,9 +4,9 @@ import ContrastSlider from '@/assets/Contrast.png';
 import PaperImage from '@/assets/Paper.png';
 import SignOverlay from '@/assets/Sign.png';
 import StampOverlay from '@/assets/Stamp.png';
-import JpgIcon from '@/assets/jpg.png';
-import PdfIcon from '@/assets/pdf.png';
-import TxtIcon from '@/assets/txt.png';
+import JpgIcon from '@/assets/JPG.png';
+import PdfIcon from '@/assets/PDF.png';
+import TxtIcon from '@/assets/TXT.png';
 import {
   DocScannerIcon,
   SignStampIcon,

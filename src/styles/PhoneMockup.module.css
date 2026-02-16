@@ -112,6 +112,7 @@
 @media (width <= 768px) {
   .phone-image {
     max-height: 420px;
+    height: 90%;
   }
 
   .export-icon {

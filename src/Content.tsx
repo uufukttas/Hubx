@@ -16,7 +16,7 @@ const Content: FC = () => {
 
   useEffect(() => {
     setActiveTabId(features[0]?.id ?? 0);
-  }, [activeTabId, features]);
+  }, []);
 
   if (isLoading) {
     return <FeaturesLoading />;

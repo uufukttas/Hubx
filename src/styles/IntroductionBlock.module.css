@@ -3,18 +3,21 @@
   flex-direction: column;
   gap: 32px;
   align-items: flex-end;
+
   width: 556px;
   padding: 0;
 }
 
 .text-container {
   position: relative;
+
   display: flex;
   flex: none;
   flex-direction: column;
   flex-grow: 0;
   align-items: flex-end;
   order: 0;
+
   width: 556px;
   height: 149px;
 }
@@ -24,11 +27,13 @@
   flex-direction: row;
   gap: 24px;
   align-items: flex-start;
+
   width: 135px;
   height: 54px;
-  padding: 0;
-  border: 0.5px solid rgb(0 0 0 / 16%);
   margin: 10px 0;
+  padding: 0;
+
+  border: 0.5px solid rgb(0 0 0 / 16%);
 }
 
 .title-section {
@@ -42,6 +47,7 @@
   position: absolute;
   top: 0;
   right: 0;
+
   font-family: 'SF Pro Display', sans-serif;
   font-size: 16px;
   font-weight: 800;
@@ -57,8 +63,10 @@
   position: absolute;
   top: 35px;
   right: 0;
+
   height: 40px;
   margin: 0;
+
   font-family: 'SF Pro Display', sans-serif;
   font-size: 32px;
   font-weight: 600;
@@ -72,9 +80,11 @@
   position: absolute;
   top: 95px;
   left: 0;
+
   width: 556px;
   height: 54px;
   margin: 0;
+
   font-family: 'SF Pro Display', sans-serif;
   font-size: 20px;
   font-weight: 400;
@@ -100,23 +110,27 @@
 @media (width <= 768px) {
   .container {
     display: flex;
-    align-items: center;
     gap: 0;
+    align-items: center;
   }
 
   .text-container {
     position: static;
-    margin: 10px 0;
+
     width: 100%;
     height: auto;
+    margin: 10px 0;
+
     text-align: center;
   }
 
   .title-section {
     position: static;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+
     width: 100%;
     height: auto;
   }
@@ -149,14 +163,17 @@
 
   .button-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    flex-direction: column;
+
     box-sizing: border-box;
     width: 100%;
-    padding: 0;
-    border: none;
     margin: 0;
+    padding: 0;
+
+    text-align: center;
+
+    border: none;
   }
 }

@@ -32,7 +32,7 @@ function Button({
   const isLink = 'href' in rest && rest.href != null;
   const classNames = [
     styles.button,
-    variant === 'primary' ? styles['button--primary'] : styles['button--tab'],
+    variant === 'primary' ? styles['button-primary'] : styles['button-tab'],
     className,
   ]
     .filter(Boolean)
@@ -43,7 +43,7 @@ function Button({
     return (
       <a href={href} className={classNames} {...linkRest}>
         {variant === 'primary' ? (
-          <span className={styles.button__text}>{children}</span>
+          <span className={styles['button-text']}>{children}</span>
         ) : (
           children
         )}
@@ -51,7 +51,12 @@ function Button({
     );
   }
 
-  const { active, onClick, type = 'button', ...buttonRest } = rest as ButtonAsButton;
+  const {
+    active,
+    onClick,
+    type = 'button',
+    ...buttonRest
+  } = rest as ButtonAsButton;
   return (
     <button
       type={type}

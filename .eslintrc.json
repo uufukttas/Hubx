@@ -15,7 +15,7 @@
         "plugin:react-hooks/recommended"
       ],
       "parserOptions": {
-        "project": "./tsconfig.json"
+        "project": ["./tsconfig.json", "./tsconfig.vite.json"]
       },
       "rules": {
         "react/react-in-jsx-scope": "off"

@@ -1,9 +1,10 @@
+import { FC } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/shared/components/Button';
 import styles from '@/styles/IntroductionBlock.module.css';
 import type { IIntroductionBlockProps } from '@/types';
 
-const IntroductionBlock = ({
+const IntroductionBlock: FC<IIntroductionBlockProps> = ({
   buttonHref = '#',
   buttonText,
   description,

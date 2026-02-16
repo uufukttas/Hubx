@@ -20,7 +20,9 @@ const PhoneMockup = ({
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth <= MOBILE_BREAKPOINT);
+
     window.addEventListener('resize', check);
+
     return () => window.removeEventListener('resize', check);
   }, []);
 
@@ -97,117 +99,116 @@ const PhoneMockup = ({
   return (
     <div className={styles['phone-container']}>
       <motion.img
-        src={phoneMockupImage}
         alt="Phone mockup"
-        className={styles['phone-image']}
-        initial={{ y: 80, opacity: 1 }}
         animate={{ y: 0, opacity: 1 }}
+        className={styles['phone-image']}
+        draggable={false}
         exit={{ opacity: 0 }}
+        initial={{ y: 80, opacity: 1 }}
+        src={phoneMockupImage}
         transition={{
           y: { duration: 0.5, ease: [0.4, 0, 0.2, 1] },
           opacity: { duration: 0.2, ease: 'easeOut' },
         }}
-        draggable={false}
       />
 
       {paperImage && (
         <>
           <motion.img
-            src={paperImage}
-            alt=""
-            className={`${styles.paper} ${styles['paper-back']}`}
-            initial={paperBack.initial}
+            alt="Paper back"
             animate={paperBack.animate}
+            className={`${styles.paper} ${styles['paper-back']}`}
+            draggable={false}
             exit={{ opacity: 0 }}
+            initial={paperBack.initial}
+            src={paperImage}
             transition={{
               duration: 0.4,
               ease: 'easeOut',
               delay: 0.15,
             }}
-            draggable={false}
           />
 
           <motion.img
-            src={paperImage}
-            alt=""
-            className={`${styles.paper} ${styles['paper-middle']}`}
-            initial={paperMiddle.initial}
+            alt="Paper middle"
             animate={paperMiddle.animate}
+            className={`${styles.paper} ${styles['paper-middle']}`}
+            draggable={false}
             exit={{ opacity: 0 }}
+            initial={paperMiddle.initial}
+            src={paperImage}
             transition={{
               duration: 0.4,
               ease: 'easeOut',
               delay: 0.4,
             }}
-            draggable={false}
           />
 
           <motion.img
-            src={paperImage}
-            alt=""
-            className={`${styles.paper} ${styles['paper-front']}`}
-            initial={paperFront.initial}
+            alt="Paper front"
             animate={paperFront.animate}
+            className={`${styles.paper} ${styles['paper-front']}`}
+            draggable={false}
             exit={{ opacity: 0 }}
+            initial={paperFront.initial}
+            src={paperImage}
             transition={{
               duration: 0.4,
               ease: 'easeOut',
               delay: 0.8,
             }}
-            draggable={false}
           />
         </>
       )}
 
       {brightnessImage && (
         <motion.img
-          src={brightnessImage}
-          alt=""
-          className={`${styles['side-slider']} ${styles['brightness-slider']}`}
-          initial={{ opacity: 0 }}
+          alt="Brightness slider"
           animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.25, ease: 'easeOut', delay: 0.2 }}
+          className={`${styles['side-slider']} ${styles['brightness-slider']}`}
           draggable={false}
+          exit={{ opacity: 0 }}
+          initial={{ opacity: 0 }}
+          src={brightnessImage}
+          transition={{ duration: 0.25, ease: 'easeOut', delay: 0.2 }}
         />
       )}
 
       {contrastImage && (
         <motion.img
-          src={contrastImage}
-          alt=""
-          className={`${styles['side-slider']} ${styles['contrast-slider']}`}
-          initial={{ opacity: 0 }}
+          alt="Contrast slider"
           animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.25, ease: 'easeOut', delay: 0.4 }}
+          className={`${styles['side-slider']} ${styles['contrast-slider']}`}
           draggable={false}
+          exit={{ opacity: 0 }}
+          initial={{ opacity: 0 }}
+          src={contrastImage}
+          transition={{ duration: 0.25, ease: 'easeOut', delay: 0.4 }}
         />
       )}
 
       {overlayImages?.map((src, index) => (
         <motion.img
+          alt="Overlay image"
+          animate={{ opacity: 1, scale: 1, y: -30 }}
+          className={`${styles.overlay} ${index === 0 ? styles['overlay-sign'] : styles['overlay-stamp']}`}
+          draggable={false}
+          exit={{ opacity: 0 }}
+          initial={{ opacity: 0, scale: 0.9, y: 10 }}
           key={src}
           src={src}
-          alt=""
-          className={`${styles.overlay} ${index === 0 ? styles['overlay-sign'] : styles['overlay-stamp']}`}
-          initial={{ opacity: 0, scale: 0.9, y: 10 }}
-          animate={{ opacity: 1, scale: 1, y: -30 }}
-          exit={{ opacity: 0 }}
           transition={{
             duration: 0.25,
             ease: 'easeOut',
             delay: 0.25 + index * 0.1,
           }}
-          draggable={false}
         />
       ))}
 
       {exportIcons?.map((src, index) => (
         <motion.img
-          key={src}
-          src={src}
-          alt=""
+          alt="Export icon"
+          animate={{ y: 0, opacity: 1, scale: 1 }}
           className={`${styles['export-icon']} ${
             index === 0
               ? styles['export-arrow']
@@ -217,15 +218,16 @@ const PhoneMockup = ({
                   ? styles['export-jpg']
                   : styles['export-txt']
           }`}
-          initial={{ y: 80, opacity: 0, scale: 0.9 }}
-          animate={{ y: 0, opacity: 1, scale: 1 }}
+          draggable={false}
           exit={{ opacity: 0 }}
+          initial={{ y: 80, opacity: 0, scale: 0.9 }}
+          key={src}
+          src={src}
           transition={{
             duration: 0.35,
             ease: 'easeOut',
             delay: 0.25 + index * 0.12,
           }}
-          draggable={false}
         />
       ))}
     </div>

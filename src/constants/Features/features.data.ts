@@ -1,23 +1,23 @@
 import ArrowIcon from '@/assets/Arrow.png';
 import BrightnessSlider from '@/assets/Brightness.png';
 import ContrastSlider from '@/assets/Contrast.png';
+import JpgIcon from '@/assets/JPG.png';
 import PaperImage from '@/assets/Paper.png';
+import PdfIcon from '@/assets/PDF.png';
 import SignOverlay from '@/assets/Sign.png';
 import StampOverlay from '@/assets/Stamp.png';
-import JpgIcon from '@/assets/JPG.png';
-import PdfIcon from '@/assets/PDF.png';
 import TxtIcon from '@/assets/TXT.png';
-import DocumentPhone from '@/assets/phones/DocumentPhone.png';
-import SignStampPhone from '@/assets/phones/SignStampPhone.png';
-import BatchScanPhone from '@/assets/phones/BatchScanPhone.png';
 import AdvFiltersPhone from '@/assets/phones/AdvFiltersPhone.png';
+import BatchScanPhone from '@/assets/phones/BatchScanPhone.png';
+import DocumentPhone from '@/assets/phones/DocumentPhone.png';
 import ExportSharePhone from '@/assets/phones/ExportSharePhone.png';
+import SignStampPhone from '@/assets/phones/SignStampPhone.png';
 import {
-  DocScannerIcon,
-  SignStampIcon,
-  BatchScanIcon,
   AdvFilterIcon,
+  BatchScanIcon,
+  DocScannerIcon,
   ExportShareIcon,
+  SignStampIcon,
 } from '@/shared/components/icons';
 import type { IFeature } from '@/types';
 
@@ -29,7 +29,7 @@ const FEATURES: IFeature[] = [
     Icon: DocScannerIcon,
     id: 0,
     name: 'document-scanner',
-    phoneImage: DocumentPhone as string,
+    phoneImage: DocumentPhone,
     subTitle: 'Scan with Ease',
     tabLabel: 'Document Scanner',
     title: 'Document Scanner',
@@ -41,11 +41,11 @@ const FEATURES: IFeature[] = [
     Icon: SignStampIcon,
     id: 1,
     name: 'sign-stamp',
-    phoneImage: SignStampPhone as string,
+    phoneImage: SignStampPhone,
     subTitle: 'One-Tap Focus',
     tabLabel: 'Sign & Stamp',
     title: 'SIGN & STAMP',
-    overlayImages: [SignOverlay as string, StampOverlay as string],
+    overlayImages: [SignOverlay, StampOverlay],
   },
   {
     buttonText: 'Learn More',
@@ -54,8 +54,8 @@ const FEATURES: IFeature[] = [
     Icon: BatchScanIcon,
     id: 2,
     name: 'batch-scanning',
-    paperImage: PaperImage as string,
-    phoneImage: BatchScanPhone as string,
+    paperImage: PaperImage,
+    phoneImage: BatchScanPhone,
     subTitle: 'Multiple Page Scan',
     tabLabel: 'Batch Scanning',
     title: 'BATCH SCANNING',
@@ -67,12 +67,12 @@ const FEATURES: IFeature[] = [
     Icon: AdvFilterIcon,
     id: 3,
     name: 'advanced-filters',
-    phoneImage: AdvFiltersPhone as string,
+    phoneImage: AdvFiltersPhone,
     subTitle: 'Uniqe Filters',
     tabLabel: 'Advanced Filters',
     title: 'Advanced Filters',
-    brightnessImage: BrightnessSlider as string,
-    contrastImage: ContrastSlider as string,
+    brightnessImage: BrightnessSlider,
+    contrastImage: ContrastSlider,
   },
   {
     buttonText: 'Learn More',
@@ -80,16 +80,11 @@ const FEATURES: IFeature[] = [
     Icon: ExportShareIcon,
     id: 4,
     name: 'export-and-share',
-    phoneImage: ExportSharePhone as string,
+    phoneImage: ExportSharePhone,
     subTitle: 'All-Round Conversion',
     tabLabel: 'Export & Share',
     title: 'Export & Share',
-    exportIcons: [
-      ArrowIcon as string,
-      PdfIcon as string,
-      JpgIcon as string,
-      TxtIcon as string,
-    ],
+    exportIcons: [ArrowIcon, PdfIcon, JpgIcon, TxtIcon],
   },
 ];
 

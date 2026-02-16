@@ -1,8 +1,10 @@
 .phone-container {
   position: relative;
+
   display: flex;
   align-items: flex-end;
   justify-content: center;
+
   width: 100%;
 }
 
@@ -11,6 +13,7 @@
   width: 365.5px;
   height: 100%;
   max-height: 760px;
+
   object-fit: contain;
 }
 
@@ -52,9 +55,11 @@
 
 .side-slider {
   pointer-events: none;
+
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+
   height: 80%;
 }
 

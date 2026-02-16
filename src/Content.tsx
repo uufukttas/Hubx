@@ -1,6 +1,5 @@
 import { FC, useEffect, useState } from 'react';
-import { BottomTabs } from './components';
-import { FeaturesError, FeaturesLoading } from './components';
+import { BottomTabs, FeaturesError, FeaturesLoading } from './components';
 import { FeatureContent } from './FeatureContent';
 import { useFeatures } from './hooks/useFeatures';
 import styles from './FeatureContent.module.css';
@@ -17,7 +16,7 @@ const Content: FC = () => {
 
   useEffect(() => {
     setActiveTabId(features[0]?.id ?? 0);
-  }, []);
+  }, [activeTabId, features]);
 
   if (isLoading) {
     return <FeaturesLoading />;
@@ -34,7 +33,7 @@ const Content: FC = () => {
 
   return (
     <div className={styles.content}>
-      <FeatureContent features={features} activeTabId={activeTabId} />
+      <FeatureContent activeTabId={activeTabId} features={features} />
       <BottomTabs
         activeTabId={activeTabId}
         features={features}

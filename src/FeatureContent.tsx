@@ -1,10 +1,13 @@
-import { useMemo } from 'react';
+import { FC, useMemo } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { IntroductionBlock, PhoneMockup } from './components';
 import type { IFeature, IFeatureContentProps } from '@/types';
 import styles from './FeatureContent.module.css';
 
-const FeatureContent = ({ features, activeTabId }: IFeatureContentProps) => {
+const FeatureContent: FC<IFeatureContentProps> = ({
+  activeTabId,
+  features,
+}: IFeatureContentProps) => {
   const activeFeature: IFeature = useMemo(
     () =>
       (features.find(

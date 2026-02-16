@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { motion } from 'framer-motion';
 import {
   CIRCLE_SIZE,
@@ -11,11 +12,15 @@ import { Button } from '@/shared/components/Button';
 import type { IBottomTabsProps, IFeature, IItem } from '@/types';
 import styles from '@/styles/BottomTabs.module.css';
 
-const BottomTabs = ({ activeTabId, features, onChange }: IBottomTabsProps) => {
+const BottomTabs: FC<IBottomTabsProps> = ({
+  activeTabId,
+  features,
+  onChange,
+}: IBottomTabsProps) => {
   const navItems: IItem[] = features.map((feature: IFeature) => ({
     id: feature.id,
-    label: feature.tabLabel,
     Icon: feature.Icon,
+    label: feature.tabLabel,
   }));
 
   return (

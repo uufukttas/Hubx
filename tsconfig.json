@@ -30,7 +30,7 @@
     "src/**/*.tsx",
     "main.tsx",
     "src/App.tsx",
-    "*/App.tsx",
+    "*/App.tsx"
   ],
   "references": [
     {

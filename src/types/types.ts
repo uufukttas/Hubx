@@ -1,8 +1,8 @@
 import type { ComponentType } from 'react';
 
 export interface IBottomTabsProps {
-  features: IFeature[];
   activeTabId: number;
+  features: IFeature[];
   onChange: (id: number) => void;
 }
 export interface IFeature {
@@ -26,19 +26,19 @@ export interface IFeaturesErrorProps {
   onRetry?: () => void;
 }
 export interface IFeatureContentProps {
-  features: IFeature[];
   activeTabId: number;
+  features: IFeature[];
 }
 export interface IIconProps {
   className?: string;
   color?: string;
 }
 export interface IIntroductionBlockProps {
+  buttonHref?: string | undefined;
+  buttonText?: string | undefined;
+  description: string;
   subTitle?: string | undefined;
   title: string;
-  description: string;
-  buttonText?: string | undefined;
-  buttonHref?: string | undefined;
 }
 export interface IItem {
   id: number;
@@ -47,9 +47,9 @@ export interface IItem {
 }
 export interface IPhoneMockupProps {
   phoneMockupImage: string;
-  overlayImages?: string[] | undefined;
-  paperImage?: string | undefined;
   brightnessImage?: string | undefined;
   contrastImage?: string | undefined;
   exportIcons?: string[] | undefined;
+  overlayImages?: string[] | undefined;
+  paperImage?: string | undefined;
 }
